@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>পি.আর.এস অ্যাওয়ার্ড ওয়ার্কশপ ২০২৬ — বাংলাদেশ স্কাউটস, গোপালগঞ্জ জেলা রোভার</title>
+<style>
+  :root{--green:#14532D;--dark:#0B3220;--gold:#B8912B;--gold-lt:#E3C169;
+        --paper:#FFFDF6;--ink:#1B2A20;--role:#3C4A40}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);line-height:1.75;
+       font-family:"Noto Sans Bengali","Kohinoor Bangla","SolaimanLipi","Nirmala UI",system-ui,sans-serif}
+  header{background:var(--green);color:var(--paper);padding:22px 18px;text-align:center;
+         border-bottom:4px solid var(--gold)}
+  header .org{font-size:.95rem;letter-spacing:.14em}
+  header h1{margin:.35rem 0 .2rem;font-size:1.3rem;line-height:1.5}
+  header .meta{font-size:.9rem;color:var(--gold-lt)}
+  main{max-width:860px;margin:0 auto;padding:18px 16px 56px}
+  section{margin:26px 0}
+  h2{font-size:1.08rem;color:var(--green);border-right:5px solid var(--gold);
+     padding:4px 12px 4px 0;margin:0 0 12px;text-align:right}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;background:#fff}
+  th,td{border:1px solid #ddd6c2;padding:9px 11px;text-align:right;vertical-align:top}
+  th{background:#F3EFE2;color:var(--dark);white-space:nowrap}
+  thead th{background:var(--green);color:var(--paper);text-align:center}
+  .card{background:#fff;border:1px solid var(--gold-lt);border-top:4px solid var(--green);
+        border-radius:6px;padding:16px 18px}
+  .card h3{margin:0 0 10px;color:var(--dark);font-size:1.15rem}
+  .pill{display:inline-block;background:#E8F0E8;color:var(--green);border-radius:999px;
+        padding:2px 12px;font-size:.82rem;margin-right:6px}
+  .pending{color:var(--role);font-style:italic}
+  footer{text-align:center;font-size:.85rem;color:var(--role);padding:18px;
+         border-top:1px solid var(--gold-lt)}
+  a{color:var(--green)}
+  @media(max-width:520px){th,td{padding:7px 8px;font-size:.9rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="org">বাংলাদেশ স্কাউটস</div>
+  <div class="org">গোপালগঞ্জ জেলা রোভার</div>
+  <h1>প্রেসিডেন্ট’স রোভার স্কাউট (পি.আর.এস) অ্যাওয়ার্ড ওয়ার্কশপ ২০২৬</h1>
+  <div class="meta">০২ নভেম্বর ২০২৬ খ্রি. (সোমবার) · গোপালগঞ্জ সরকারি কলেজ, গোপালগঞ্জ</div>
+</header>
+
+<main>
+  <section id="participant">
+    <h2>অংশগ্রহণকারীর তথ্য</h2>
+    <div class="card" id="pcard"><span class="pending">সনদের কিউআর কোড স্ক্যান করলে এখানে
+      সংশ্লিষ্ট অংশগ্রহণকারীর তথ্য দেখা যাবে।</span></div>
+  </section>
+
+  <section>
+    <h2>প্রোগ্রামের তথ্য</h2>
+    <table id="prog"></table>
+  </section>
+
+  <section>
+    <h2>ওয়ার্কশপ স্টাফ</h2>
+    <table id="staff"></table>
+  </section>
+
+  <section>
+    <h2>ওয়ার্কশপের সময়সূচি</h2>
+    <table id="sched"></table>
+  </section>
+
+  <section>
+    <h2>যোগাযোগ ও যাচাই</h2>
+    <div class="card">
+      সনদের সত্যতা যাচাইয়ের জন্য যোগাযোগ করুন — সম্পাদক, বাংলাদেশ স্কাউটস,
+      গোপালগঞ্জ জেলা রোভার। মোবাইল: ০১৭১৭৩১৪৬৯০ ·
+      ই-মেইল: <a href="mailto:gopalganjdistrictrover@gmail.com">gopalganjdistrictrover@gmail.com</a>
+    </div>
+  </section>
+</main>
+
+<footer>বাংলাদেশ স্কাউটস, গোপালগঞ্জ জেলা রোভার · Be Prepared to serve</footer>
+
+<script>
+// ------------------------------------------------------------------
+// একটিমাত্র জায়গা থেকে সব তথ্য নিয়ন্ত্রিত হয়। "…………" চিহ্নিত ঘরগুলি
+// জেলা রোভার দপ্তর থেকে তথ্য পাওয়ার পর পূরণ করতে হবে।
+// ------------------------------------------------------------------
+const PROGRAMME = [
+  ["ওয়ার্কশপের নাম", "প্রেসিডেন্ট’স রোভার স্কাউট (পি.আর.এস) অ্যাওয়ার্ড ওয়ার্কশপ ২০২৬"],
+  ["আয়োজক", "বাংলাদেশ স্কাউটস, গোপালগঞ্জ জেলা রোভার"],
+  ["স্থান", "গোপালগঞ্জ সরকারি কলেজ, গোপালগঞ্জ"],
+  ["তারিখ", "০২ নভেম্বর ২০২৬ খ্রি. (সোমবার), দিনব্যাপী"],
+  ["রিপোর্টিং", "সকাল ৯.০০ ঘটিকা, প্রশিক্ষণ স্থান"],
+  ["অংশগ্রহণকারী", "ইউনিটের সদস্য, প্রশিক্ষণ ও সেবা স্তরের রোভার ও গার্ল-ইন-রোভারবৃন্দ"],
+  ["বিষয়বস্তু", "পি.আর.এস অ্যাওয়ার্ড অর্জনের শর্তাবলি, মাই প্রোগ্রেস বই পূরণ ও লগ বই তৈরি"],
+  ["সার্কুলার স্মারক", "বা/স্কা/গো/জে/রো:পি.আর.এস ওয়ার্কশপ/৬৪৭(৪০)/২০২৬, তারিখ ২৩ অক্টোবর ২০২৬"]
+];
+
+const STAFF = [
+  ["ওয়ার্কশপ পরিচালক", "প্রফেসর মাসুদ আহম্মদ, এ.এল.টি", "কমিশনার, গোপালগঞ্জ জেলা রোভার"],
+  ["সদস্য", "মোঃ মজনুর রশিদ, উডব্যাজার", "ডি.আর.এস.এল, গোপালগঞ্জ জেলা রোভার"],
+  ["সদস্য", "মোঃ জুবাইর আল মাহমুদ, এ.এল.টি", "সম্পাদক, গোপালগঞ্জ জেলা রোভার"],
+  ["…………", "…………", "পূর্ণ স্টাফ তালিকা সংযোজিত হবে"]
+];
+
+const SCHEDULE = [
+  ["সকাল ৯.০০ – ৯.৩০", "রিপোর্টিং ও রেজিস্ট্রেশন"],
+  ["…………", "উদ্বোধনী অনুষ্ঠান"],
+  ["…………", "১ম অধিবেশন — পি.আর.এস অ্যাওয়ার্ডের শর্তাবলি"],
+  ["…………", "২য় অধিবেশন — মাই প্রোগ্রেস বই পূরণ"],
+  ["…………", "৩য় অধিবেশন — লগ বই তৈরি"],
+  ["…………", "সমাপনী ও সনদ বিতরণ"]
+];
+
+// সনদ নম্বর -> অংশগ্রহণকারী (এক্সেল থেকে স্বয়ংক্রিয়ভাবে বসানো হবে)
+const PARTICIPANTS = {
+  "001": {"name":"Md. Rakib Hasan", "bn":"মোঃ রাকিব হাসান",
+          "unit":"Gopalganj Government College Rover Scout Group",
+          "level":"সেবা স্তর", "bsid":"…………", "date":"০২ নভেম্বর ২০২৬"}
+};
+
+function rows(tbl, data, head){
+  const t = document.getElementById(tbl);
+  let h = head ? "<thead><tr>" + head.map(c => "<th>"+c+"</th>").join("") + "</tr></thead>" : "";
+  h += "<tbody>" + data.map(r =>
+        "<tr>" + r.map((c,i) => (i===0 && !head ? "<th>"+c+"</th>" : "<td>"+c+"</td>")).join("") +
+        "</tr>").join("") + "</tbody>";
+  t.innerHTML = h;
+}
+rows("prog", PROGRAMME);
+rows("staff", STAFF, ["দায়িত্ব", "নাম", "পদবি / প্রতিষ্ঠান"]);
+rows("sched", SCHEDULE, ["সময়", "কার্যক্রম"]);
+
+const cert = (location.hash.match(/C=([^&]+)/) || [])[1];
+if (cert) {
+  const p = PARTICIPANTS[decodeURIComponent(cert)];
+  const box = document.getElementById("pcard");
+  box.innerHTML = p
+    ? "<h3>" + (p["bn"] || p["name"]) + "</h3>" +
+      "<div><span class='pill'>সনদ নম্বর " + cert + "/PRS/2026</span>" +
+      "<span class='pill'>" + p["level"] + "</span></div>" +
+      "<table style='margin-top:12px'><tbody>" +
+      "<tr><th>ইংরেজি নাম</th><td>" + p["name"] + "</td></tr>" +
+      "<tr><th>রোভার স্কাউট গ্রুপ</th><td>" + p["unit"] + "</td></tr>" +
+      "<tr><th>বি.এস আইডি</th><td>" + p["bsid"] + "</td></tr>" +
+      "<tr><th>অংশগ্রহণের তারিখ</th><td>" + p["date"] + "</td></tr>" +
+      "</tbody></table>" +
+      "<p style='margin:12px 0 0;color:var(--green)'>✔ এই সনদটি বাংলাদেশ স্কাউটস, " +
+      "গোপালগঞ্জ জেলা রোভারের রেকর্ডে পাওয়া গেছে।</p>"
+    : "<span class='pending'>সনদ নম্বর " + cert + " রেকর্ডে পাওয়া যায়নি। " +
+      "যাচাইয়ের জন্য জেলা রোভার দপ্তরে যোগাযোগ করুন।</span>";
+}
+</script>
+</body>
+</html>
