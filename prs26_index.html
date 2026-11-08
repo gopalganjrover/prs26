@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3rd President's Rover Scout (P.R.S) Award Workshop 2026 — Bangladesh Scouts, Gopalganj District Rover</title>
+<style>
+  :root{--green:#14532D;--dark:#0B3220;--gold:#B8912B;--gold-lt:#E3C169;
+        --paper:#FFFDF6;--ink:#1B2A20;--role:#3C4A40}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);line-height:1.7;
+       font-family:"Baskerville","Libre Baskerville",Georgia,"Times New Roman",serif}
+  header{background:var(--green);color:var(--paper);padding:24px 18px;text-align:center;
+         border-bottom:4px solid var(--gold)}
+  header .org{font-size:.9rem;letter-spacing:.22em;text-transform:uppercase}
+  header h1{margin:.5rem 0 .3rem;font-size:1.3rem;line-height:1.45}
+  header h1 sup{font-size:.6em;vertical-align:super}
+  header .meta{font-size:.92rem;color:var(--gold-lt)}
+  main{max-width:880px;margin:0 auto;padding:20px 16px 56px}
+  section{margin:28px 0}
+  h2{font-size:1.05rem;color:var(--green);letter-spacing:.06em;text-transform:uppercase;
+     border-left:5px solid var(--gold);padding:4px 0 4px 12px;margin:0 0 12px}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;background:#fff}
+  th,td{border:1px solid #ddd6c2;padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:#F3EFE2;color:var(--dark);white-space:nowrap}
+  thead th{background:var(--green);color:var(--paper)}
+  .card{background:#fff;border:1px solid var(--gold-lt);border-top:4px solid var(--green);
+        border-radius:6px;padding:18px 20px}
+  .card h3{margin:0 0 10px;color:var(--dark);font-size:1.3rem}
+  .pill{display:inline-block;background:#E8F0E8;color:var(--green);border-radius:999px;
+        padding:3px 13px;font-size:.82rem;margin-right:7px}
+  .pending{color:var(--role);font-style:italic}
+  .ok{color:var(--green);margin:14px 0 0}
+  footer{text-align:center;font-size:.85rem;color:var(--role);padding:18px;
+         border-top:1px solid var(--gold-lt);letter-spacing:.08em}
+  a{color:var(--green)}
+  @media(max-width:520px){th,td{padding:7px 9px;font-size:.9rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="org">Bangladesh Scouts</div>
+  <div class="org">Gopalganj District Rover</div>
+  <h1>3<sup>rd</sup> President's Rover Scout (P.R.S) Award Workshop 2026</h1>
+  <div class="meta">Monday, 02 November 2026 · Gopalganj Government College, Gopalganj</div>
+</header>
+
+<main>
+  <section id="participant">
+    <h2>Participant Details</h2>
+    <div class="card" id="pcard"><span class="pending">Scan the QR code printed on a
+      certificate to see that participant's details here.</span></div>
+  </section>
+
+  <section>
+    <h2>Programme Information</h2>
+    <table id="prog"></table>
+  </section>
+
+  <section>
+    <h2>Workshop Staff</h2>
+    <table id="staff"></table>
+  </section>
+
+  <section>
+    <h2>Programme Schedule</h2>
+    <table id="sched"></table>
+  </section>
+
+  <section>
+    <h2>Contact and Verification</h2>
+    <div class="card">
+      To verify a certificate, contact the District Secretary, Bangladesh Scouts,
+      Gopalganj District Rover — mobile 01717314690,
+      e-mail <a href="mailto:gopalganjdistrictrover@gmail.com">gopalganjdistrictrover@gmail.com</a>.
+    </div>
+  </section>
+</main>
+
+<footer>Bangladesh Scouts, Gopalganj District Rover · Be Prepared to serve</footer>
+
+<script>
+// ---------------------------------------------------------------------
+// All content is held in the four blocks below. Entries marked "………" are
+// to be filled in when the district office supplies them.
+// ---------------------------------------------------------------------
+const PROGRAMME = [
+  ["Workshop", "3rd President's Rover Scout (P.R.S) Award Workshop 2026"],
+  ["Date", "Monday, 02 November 2026 (day-long)"],
+  ["Venue", "Gopalganj Government College, Gopalganj"],
+  ["Reporting", "9:00 am at the venue"],
+  ["Organised by", "Bangladesh Scouts, Gopalganj District Rover"],
+  ["In co-operation with", "Bangladesh Scouts Rover Region"],
+  ["Financed and managed by", "Bangladesh Scouts, Gopalganj District Rover"],
+  ["Workshop Director", "Md. Inamul Mia, Woodbadger"],
+  ["Workshop staff", "5 officers (listed below)"],
+  ["Participants", "Members of units; Rovers and Girl-in-Rovers of the Training and Service stages"],
+  ["Number of participants", "81"],
+  ["Volunteers", "5"],
+  ["Contents", "Requirements of the President's Rover Scout Award, completion of the My Progress book and preparation of the Log Book"],
+  ["Training method", "Lecture method and demonstration"],
+  ["Training materials", "Handout, chart, chalk, duster, rope, poster paper, marker pen, flag, magnet board, magnets, white board, overhead projector and pointer"],
+  ["Session room", "Indoor, in the college building"],
+  ["Catering", "Cooked meal"],
+  ["Registration", "Through the district online registration form; deadline 29 October 2026"],
+  ["Registration fee", "Tk 50 per participant"],
+  ["Travel allowance", "No T.A. or D.A. was paid by the workshop"],
+  ["Circular", "District Rover memo no. 647(40)/2026 (P.R.S Workshop), dated 23 October 2026"],
+  ["District office", "gopalganjdistrictrover@gmail.com · www.districtrover.gopalganj.gov.bd"]
+];
+
+const STAFF = [
+  ["Workshop Director", "Md. Inamul Mia, Woodbadger",
+   "Assistant Commissioner (Media and Publication), Bangladesh Scouts Gopalganj District Rover; and Assistant Professor, Department of English, Gopalganj Government College, Gopalganj"],
+  ["Officer", "Md. Majnur Rashid, Woodbadger",
+   "District Rover Scout Leader, Bangladesh Scouts Gopalganj District Rover; and Associate Professor, Department of Sociology, Gopalganj Science and Technology University, Gopalganj"],
+  ["Officer", "Reday Kumar Sheel, Skill Course completed",
+   "Assistant Commissioner (Special Events), Bangladesh Scouts Gopalganj District Rover; and President, Prottoy Open Scout Group, Gopalganj"],
+  ["Officer", "Sakib Husain Hredoy, Skill Course completed",
+   "Assistant Commissioner (Community Development and Health), Bangladesh Scouts Gopalganj District Rover; and Secretary, Anirban Open Scout Group, Gopalganj"],
+  ["Officer", "Anik Kumar Saha, P.R.S",
+   "Gopalganj Science and Technology University, Gopalganj"]
+];
+
+const SCHEDULE = [
+  ["9:00 am", "Attendance, registration and division into groups", "Reday Kumar Sheel"],
+  ["9:30 am", "Inaugural session", "Sakib Husain Hredoy"],
+  ["10:00 am", "Objectives of the workshop", "Md. Inamul Mia"],
+  ["10:15 am", "Forming the committee to finalise the Workshop Recommendations and the Workshop Declaration", "Reday Kumar Sheel"],
+  ["10:30 am", "Orientation on the Rover Programme", "Anik Kumar Saha"],
+  ["11:30 am", "Rules for completing the My Progress book and preparing the Log Book", "Sakib Husain Hredoy"],
+  ["1:00 pm", "Lunch, prayers and rest", "—"],
+  ["2:00 pm", "Methods of earning the P.R.S Award", "Anik Kumar Saha"],
+  ["3:30 pm", "Identifying the obstacles to earning the P.R.S Award and determining the remedies (group work)", "Md. Majnur Rashid"],
+  ["4:00 pm", "Prayers", "—"],
+  ["4:15 pm", "Reading of the Workshop Recommendations and the Workshop Declaration", "Reday Kumar Sheel"],
+  ["4:30 pm", "Expectations from the participants, open discussion, distribution of certificates and closing ceremony", "Md. Inamul Mia"],
+  ["5:00 pm", "Close of the workshop", "—"]
+];
+
+// Certificate number -> participant (filled automatically from the roster)
+const PARTICIPANTS = {
+ "001": {
+  "name": "Shahed Sheikh",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Rover Scout Leader (Woodbadger)",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "002": {
+  "name": "SUMONA KHANAM",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "003": {
+  "name": "Md. Rahid Khan Thakur",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "004": {
+  "name": "Tisha Sikder",
+  "unit": "Troop Gilwell Open Scout Group",
+  "stage": "Training Stage",
+  "bsid": "ZI5120",
+  "date": "02 November 2026"
+ },
+ "005": {
+  "name": "Apurba Khan",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Training Stage",
+  "bsid": "CA3349",
+  "date": "02 November 2026"
+ },
+ "006": {
+  "name": "PAVEL BISWAS",
+  "unit": "Gopalganj Govt. Polytechnic Institute Rover Scout Group",
+  "stage": "Training Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "007": {
+  "name": "RAJIB KRITANIA",
+  "unit": "Tungipara Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "ZB6269",
+  "date": "02 November 2026"
+ },
+ "008": {
+  "name": "DEB BISWAS",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "009": {
+  "name": "Reaz Afrid",
+  "unit": "Troop Gilwell Open Scout Group",
+  "stage": "Service Stage",
+  "bsid": "AU6368",
+  "date": "02 November 2026"
+ },
+ "010": {
+  "name": "Nayon Khan",
+  "unit": "Troop Gilwell Open Scout Group",
+  "stage": "Service Stage",
+  "bsid": "AN6683",
+  "date": "02 November 2026"
+ },
+ "011": {
+  "name": "Md Mahin Islam",
+  "unit": "Gopalganj Govt. Polytechnic Institute Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "012": {
+  "name": "Md.Rakib Chowdhury",
+  "unit": "Tungipara Govt. College Rover Scout Group",
+  "stage": "Service Stage",
+  "bsid": "AO3641",
+  "date": "02 November 2026"
+ },
+ "013": {
+  "name": "NIMAI SHIL",
+  "unit": "Kotalipara Govt. Adarsha College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "ZC7161",
+  "date": "02 November 2026"
+ },
+ "014": {
+  "name": "Miti Biswas",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "015": {
+  "name": "ARKA BISWAS",
+  "unit": "Ramshil College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "016": {
+  "name": "YAQUB ALI HOWLADER",
+  "unit": "Kotalipara Govt. Adarsha College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "ZJ6239",
+  "date": "02 November 2026"
+ },
+ "017": {
+  "name": "Pakija Islam Nur",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "018": {
+  "name": "Shammi Akter Supti",
+  "unit": "Tungipara Govt. College Rover Scout Group",
+  "stage": "Training Stage",
+  "bsid": "B03140",
+  "date": "02 November 2026"
+ },
+ "019": {
+  "name": "Nafija Sultana",
+  "unit": "Tungipara Govt. College Rover Scout Group",
+  "stage": "Training Stage",
+  "bsid": "4567",
+  "date": "02 November 2026"
+ },
+ "020": {
+  "name": "Sumayea Khanam",
+  "unit": "Tungipara Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "021": {
+  "name": "REAJUL",
+  "unit": "Tungipara Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "022": {
+  "name": "Purnima Bakchi",
+  "unit": "Tungipara Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "023": {
+  "name": "Nuraiya Duti",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "024": {
+  "name": "Sovon Roy Sampad",
+  "unit": "Tungipara Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "025": {
+  "name": "MORSHED KABIR",
+  "unit": "Muksudpur Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "ZF3546",
+  "date": "02 November 2026"
+ },
+ "026": {
+  "name": "Faria",
+  "unit": "Kazi Zahural Huq College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "027": {
+  "name": "TASMIN JAHAN NABIDA",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Training Stage",
+  "bsid": "BY4710",
+  "date": "02 November 2026"
+ },
+ "028": {
+  "name": "Sadiya",
+  "unit": "Tungipara Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "029": {
+  "name": "Monisha bala",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "030": {
+  "name": "Shinha Islam Bonna",
+  "unit": "Gopalganj Govt. Mohila College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "031": {
+  "name": "Romi Molla",
+  "unit": "Tungipara Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "032": {
+  "name": "Sithi biswas",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "033": {
+  "name": "MD. TARIN SHEIKH",
+  "unit": "Muksudpur Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "ZJ2028",
+  "date": "02 November 2026"
+ },
+ "034": {
+  "name": "SUVRO SIKDER",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "035": {
+  "name": "MOSTAK HOSSAIN",
+  "unit": "Muksudpur Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "ZE2276",
+  "date": "02 November 2026"
+ },
+ "036": {
+  "name": "ANIMESH HALDER",
+  "unit": "Ramshil College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "037": {
+  "name": "Shanta Akter Habiba",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "038": {
+  "name": "SOUMITRA SHEKHAR DAS",
+  "unit": "Ramshil College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "039": {
+  "name": "Nitabiswas",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "040": {
+  "name": "AYSHA MONI",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Training Stage",
+  "bsid": "CG9142",
+  "date": "02 November 2026"
+ },
+ "041": {
+  "name": "Md.RUMAN HOSSAIN RONY",
+  "unit": "Troop Gilwell Open Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "ZM3552",
+  "date": "02 November 2026"
+ },
+ "042": {
+  "name": "SUDIP BISWAS",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "043": {
+  "name": "HIMEL BALA",
+  "unit": "Troop Gilwell Open Scout Group",
+  "stage": "Training Stage",
+  "bsid": "ZL5668",
+  "date": "02 November 2026"
+ },
+ "044": {
+  "name": "RAHOMATEMOLLA",
+  "unit": "Gopalganj Govt Technical School and College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "045": {
+  "name": "DISHA BALA",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "046": {
+  "name": "SOHIM LASKER",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Training Stage",
+  "bsid": "ZE9940",
+  "date": "02 November 2026"
+ },
+ "047": {
+  "name": "Purnima Biswas",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "048": {
+  "name": "NAIM MOLLA",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "049": {
+  "name": "NADIRA AKTER JIM",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "050": {
+  "name": "JAKARIA KAZI",
+  "unit": "Gopalganj Govt Technical School and College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "051": {
+  "name": "MD. YOUSUF MOLLA",
+  "unit": "Gopalganj Govt Technical School and College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "052": {
+  "name": "SABBIR HOSAN KHAN",
+  "unit": "Gopalganj Govt Technical School and College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "053": {
+  "name": "Ismotara",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "054": {
+  "name": "Kazi Tonmoy Hasan",
+  "unit": "Troop Gilwell Open Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "055": {
+  "name": "Susmita Biswas",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "056": {
+  "name": "RETU PANNA",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "057": {
+  "name": "Hamim Sheikh",
+  "unit": "Gopalganj Govt Technical School and College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "058": {
+  "name": "Laboni Akter",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "059": {
+  "name": "Md.Siam Sheikh",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "060": {
+  "name": "SUMIYA",
+  "unit": "Gopalganj Govt. Mohila College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "061": {
+  "name": "Farhana Yeasmin",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "062": {
+  "name": "Elma",
+  "unit": "Gopalganj Govt. Mohila College Rover Scout Group",
+  "stage": "Training Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "063": {
+  "name": "AKASH BALA",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "064": {
+  "name": "Iva Akter",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "065": {
+  "name": "EMRAN GAZI",
+  "unit": "Kotalipara Govt. Adarsha College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "Zj6693",
+  "date": "02 November 2026"
+ },
+ "066": {
+  "name": "Indarni Haldar",
+  "unit": "Haji Lalmia City College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "067": {
+  "name": "NADIRA AKTER",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "068": {
+  "name": "SONGITA BISWAS",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "069": {
+  "name": "Tanha Khamam",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "070": {
+  "name": "Meghla das",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "071": {
+  "name": "Jisan",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "072": {
+  "name": "MIM AKTER JUTHI",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "073": {
+  "name": "BRISTI ROY",
+  "unit": "Troop Gilwell Open Scout Group",
+  "stage": "Training Stage",
+  "bsid": "CH0644",
+  "date": "02 November 2026"
+ },
+ "074": {
+  "name": "AZMERI ZAMAN",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "075": {
+  "name": "MEHEDI HASAN",
+  "unit": "Gopalganj Govt Technical School and College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "076": {
+  "name": "ABIR MOLLA",
+  "unit": "Gopalganj Govt Technical School and College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "077": {
+  "name": "RAJU SHIKDER",
+  "unit": "Troop Gilwell Open Scout Group",
+  "stage": "Rover Scout Leader (Woodbadger)",
+  "bsid": "BW1022",
+  "date": "02 November 2026"
+ },
+ "078": {
+  "name": "RAKIBUL HASAN MAHIN",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Training Stage",
+  "bsid": "AU8266",
+  "date": "02 November 2026"
+ },
+ "079": {
+  "name": "MD. SHEJAN SHEIKH",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "080": {
+  "name": "MD MAHADI HASSAN MINHAZ",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "—",
+  "date": "02 November 2026"
+ },
+ "081": {
+  "name": "MARZAN BIN MURSHED DEEP",
+  "unit": "Gopalganj Govt. College Rover Scout Group",
+  "stage": "Membership Stage",
+  "bsid": "ZJ7040",
+  "date": "02 November 2026"
+ },
+ "082": {
+  "name": "NEROB BISWAS",
+  "unit": "Govt Nazrul Degree College Satpar Rover Scout Group",
+  "stage": "—",
+  "bsid": "nerobbiswas573@gmail.com",
+  "date": "02 November 2026"
+ }
+};
+
+function rows(tbl, data, head){
+  const t = document.getElementById(tbl);
+  let h = head ? "<thead><tr>" + head.map(c => "<th>"+c+"</th>").join("") + "</tr></thead>" : "";
+  h += "<tbody>" + data.map(r =>
+        "<tr>" + r.map((c,i) => (i===0 && !head ? "<th>"+c+"</th>" : "<td>"+c+"</td>")).join("") +
+        "</tr>").join("") + "</tbody>";
+  t.innerHTML = h;
+}
+rows("prog", PROGRAMME);
+rows("staff", STAFF, ["Role", "Name", "Designation"]);
+rows("sched", SCHEDULE, ["Time", "Session", "Conducted by"]);
+
+const cert = (location.hash.match(/C=([^&]+)/) || [])[1];
+if (cert) {
+  const p = PARTICIPANTS[decodeURIComponent(cert)];
+  const box = document.getElementById("pcard");
+  box.innerHTML = p
+    ? "<h3>" + p["name"] + "</h3>" +
+      "<div><span class='pill'>Certificate No. " + cert + "/PRS/2026</span>" +
+      "<span class='pill'>" + p["stage"] + "</span></div>" +
+      "<table style='margin-top:14px'><tbody>" +
+      "<tr><th>Rover Scout Group</th><td>" + p["unit"] + "</td></tr>" +
+      "<tr><th>Bangladesh Scouts ID</th><td>" + p["bsid"] + "</td></tr>" +
+      "<tr><th>Date of participation</th><td>" + p["date"] + "</td></tr>" +
+      "<tr><th>Award</th><td>Certificate of Participation, 3rd President's Rover Scout " +
+      "(P.R.S) Award Workshop 2026</td></tr>" +
+      "</tbody></table>" +
+      "<p class='ok'>&#10004; This certificate is recorded with Bangladesh Scouts, " +
+      "Gopalganj District Rover.</p>"
+    : "<span class='pending'>Certificate No. " + cert + " was not found in the record. " +
+      "Please contact the district office for verification.</span>";
+}
+</script>
+</body>
+</html>
